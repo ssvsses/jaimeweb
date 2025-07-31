@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página personal</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .contenedor {
+      text-align: center;
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    img.perfil {
+      width: 150px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    #fotoExtra {
+      display: none;
+      margin-top: 30px;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #3366cc;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #224488;
+    }
+
+    a {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 📱 Estilo especial para móviles */
+    @media (max-width: 600px) {
+      .contenedor {
+        padding: 20px;
+      }
+
+      button {
+        width: 100%;
+        font-size: 18px;
+      }
+
+      img.perfil {
+        width: 120px;
+      }
+
+      #fotoExtra {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Hola, soy Jaime</h1>
+    <p>Bienvenido a mi página personal. Aquí te cuento un poco sobre mí.</p>
+
+    <h2>Sobre mí</h2>
+    <p>Me gusta la tecnología, aprender cosas nuevas y compartir conocimiento.</p>
+
+    <h2>Contacto</h2>
+    <p>Puedes escribirme a: <a href="mailto:jaime@email.com">jaime@email.com</a></p>
+
+    <img class="perfil" src="foto.jpg" alt="Foto de Jaime">
+
+    <button onclick="toggleFoto()">Ver/ocultar otra foto</button>
+
+    <img id="fotoExtra" src="foto2.jpg" alt="Otra foto de Jaime">
+  </div>
+
+  <script>
+    function toggleFoto() {
+      const foto = document.getElementById("fotoExtra");
+      foto.style.display = (foto.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
